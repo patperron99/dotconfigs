@@ -1,0 +1,314 @@
+2024-12-11 17:41:42.213 [info] [main] Log level: Info
+2024-12-11 17:41:42.213 [info] [main] Validating found git in: "git"
+2024-12-11 17:41:42.213 [info] [main] Using git "2.45.2" from "git"
+2024-12-11 17:41:42.213 [info] [Model][doInitialScan] Initial repository scan started
+2024-12-11 17:41:42.213 [info] > git rev-parse --show-toplevel [114ms]
+2024-12-11 17:41:42.213 [info] fatal: not a git repository (or any parent up to mount point /)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+2024-12-11 17:41:42.224 [info] > git rev-parse --show-toplevel [1ms]
+2024-12-11 17:41:42.230 [info] > git rev-parse --git-dir --git-common-dir [1ms]
+2024-12-11 17:41:42.240 [info] [Model][openRepository] Opened repository: /home/sysadmin/work/AnsibleMCZR
+2024-12-11 17:41:42.252 [info] > git config --get commit.template [6ms]
+2024-12-11 17:41:42.253 [info] > git rev-parse --show-toplevel [2ms]
+2024-12-11 17:41:42.264 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/main refs/remotes/main [6ms]
+2024-12-11 17:41:42.264 [info] > git rev-parse --git-dir --git-common-dir [1ms]
+2024-12-11 17:41:42.267 [info] [Model][openRepository] Opened repository: /home/sysadmin/work/Auto-Deployment
+2024-12-11 17:41:42.293 [info] > git config --get commit.template [19ms]
+2024-12-11 17:41:42.298 [info] > git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname) [6ms]
+2024-12-11 17:41:42.299 [info] > git rev-parse --show-toplevel [19ms]
+2024-12-11 17:41:42.299 [info] fatal: not a git repository (or any parent up to mount point /)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+2024-12-11 17:41:42.305 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/main refs/remotes/main [7ms]
+2024-12-11 17:41:42.306 [info] > git rev-parse --show-toplevel [2ms]
+2024-12-11 17:41:42.691 [info] > git status -z -uall [374ms]
+2024-12-11 17:41:42.691 [info] > git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname) [367ms]
+2024-12-11 17:41:42.704 [info] > git rev-parse --git-dir --git-common-dir [392ms]
+2024-12-11 17:41:42.708 [info] [Model][openRepository] Opened repository: /home/sysadmin/work/bookworm-scripts
+2024-12-11 17:41:42.733 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/main refs/remotes/main [33ms]
+2024-12-11 17:41:42.742 [info] > git rev-parse --show-toplevel [9ms]
+2024-12-11 17:41:42.742 [info] > git config --get commit.template [14ms]
+2024-12-11 17:41:42.742 [info] > git config --get commit.template [20ms]
+2024-12-11 17:41:42.750 [info] > git config --local branch.main.vscode-merge-base [10ms]
+2024-12-11 17:41:42.769 [info] > git rev-parse --git-dir --git-common-dir [20ms]
+2024-12-11 17:41:42.775 [info] [Model][openRepository] Opened repository: /home/sysadmin/work/dotconfigs
+2024-12-11 17:41:42.788 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/main refs/remotes/main [22ms]
+2024-12-11 17:41:42.789 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/main refs/remotes/main [27ms]
+2024-12-11 17:41:42.789 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/origin/main refs/remotes/origin/main [33ms]
+2024-12-11 17:41:42.811 [warning] [Git][revParse] Unable to read file: ENOENT: no such file or directory, open '/home/sysadmin/work/bookworm-scripts/.git/refs/remotes/origin/main'
+2024-12-11 17:41:42.812 [info] > git merge-base refs/heads/main refs/remotes/origin/main [17ms]
+2024-12-11 17:41:42.817 [info] > git rev-parse --show-toplevel [29ms]
+2024-12-11 17:41:42.817 [info] > git config --get commit.template [35ms]
+2024-12-11 17:41:42.827 [info] > git diff --name-status -z --diff-filter=ADMR 4571530cad10b53a5a8da6ea9f217da064f7283c...refs/remotes/origin/main [10ms]
+2024-12-11 17:41:42.827 [info] > git rev-parse refs/remotes/origin/main [16ms]
+2024-12-11 17:41:42.845 [info] > git status -z -uall [13ms]
+2024-12-11 17:41:42.846 [info] > git rev-parse --git-dir --git-common-dir [20ms]
+2024-12-11 17:41:42.848 [info] [Model][openRepository] Opened repository: /home/sysadmin/work/hugoNektarine
+2024-12-11 17:41:42.876 [info] > git status -z -uall [20ms]
+2024-12-11 17:41:42.876 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/main refs/remotes/main [31ms]
+2024-12-11 17:41:42.876 [info] > git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname) [38ms]
+2024-12-11 17:41:42.895 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/main refs/remotes/main [11ms]
+2024-12-11 17:41:42.903 [info] > git rev-parse --show-toplevel [27ms]
+2024-12-11 17:41:42.903 [info] > git config --get commit.template [34ms]
+2024-12-11 17:41:42.903 [info] > git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname) [40ms]
+2024-12-11 17:41:42.918 [info] > git config --local branch.main.vscode-merge-base [16ms]
+2024-12-11 17:41:42.926 [info] > git config --get commit.template [32ms]
+2024-12-11 17:41:42.977 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/origin/main refs/remotes/origin/main [51ms]
+2024-12-11 17:41:42.984 [info] > git rev-parse --git-dir --git-common-dir [67ms]
+2024-12-11 17:41:42.990 [info] [Model][openRepository] Opened repository: /home/sysadmin/work/lambda-v1
+2024-12-11 17:41:43.029 [info] > git status -z -uall [28ms]
+2024-12-11 17:41:43.030 [info] > git merge-base refs/heads/main refs/remotes/origin/main [46ms]
+2024-12-11 17:41:43.036 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/main refs/remotes/main [60ms]
+2024-12-11 17:41:43.039 [info] > git diff --name-status -z --diff-filter=ADMR 6ddde2347ea37433986779bb63912280b350bd7e...refs/remotes/origin/main [3ms]
+2024-12-11 17:41:43.039 [info] > git rev-parse --show-toplevel [10ms]
+2024-12-11 17:41:43.039 [info] > git config --get commit.template [17ms]
+2024-12-11 17:41:43.039 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/main refs/remotes/main [24ms]
+2024-12-11 17:41:43.039 [info] > git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname) [30ms]
+2024-12-11 17:41:43.062 [warning] [Git][revParse] Unable to read file: ENOENT: no such file or directory, open '/home/sysadmin/work/bookworm-scripts/.git/refs/remotes/origin/main'
+2024-12-11 17:41:43.067 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/main refs/remotes/main [20ms]
+2024-12-11 17:41:43.080 [info] > git config --get commit.template [13ms]
+2024-12-11 17:41:43.080 [info] > git rev-parse refs/remotes/origin/main [18ms]
+2024-12-11 17:41:43.090 [info] > git rev-parse --git-dir --git-common-dir [35ms]
+2024-12-11 17:41:43.093 [info] [Model][openRepository] Opened repository: /home/sysadmin/work/ly
+2024-12-11 17:41:43.126 [info] > git status -z -uall [41ms]
+2024-12-11 17:41:43.126 [info] > git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname) [36ms]
+2024-12-11 17:41:43.129 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/main refs/remotes/main [50ms]
+2024-12-11 17:41:43.130 [info] > git config --local branch.main.vscode-merge-base [56ms]
+2024-12-11 17:41:43.130 [warning] [Git][config] git config failed: Failed to execute git
+2024-12-11 17:41:43.146 [info] > git rev-parse --show-toplevel [26ms]
+2024-12-11 17:41:43.146 [info] fatal: not a git repository (or any parent up to mount point /)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+2024-12-11 17:41:43.146 [info] > git config --get commit.template [32ms]
+2024-12-11 17:41:43.146 [info] > git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname) [39ms]
+2024-12-11 17:41:43.159 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/main refs/remotes/main [15ms]
+2024-12-11 17:41:43.159 [info] > git reflog main --grep-reflog=branch: Created from *. [23ms]
+2024-12-11 17:41:43.174 [info] > git rev-parse --show-toplevel [17ms]
+2024-12-11 17:41:43.196 [info] > git symbolic-ref --short refs/remotes/origin/HEAD [31ms]
+2024-12-11 17:41:43.196 [info] fatal: ref refs/remotes/origin/HEAD is not a symbolic ref
+2024-12-11 17:41:43.196 [warning] [Repository][getDefaultBranch] Failed to get default branch details: Failed to execute git.
+2024-12-11 17:41:43.205 [info] > git status -z -uall [23ms]
+2024-12-11 17:41:43.205 [info] > git rev-parse --git-dir --git-common-dir [9ms]
+2024-12-11 17:41:43.209 [info] [Model][openRepository] Opened repository: /home/sysadmin/work/mycustomizer
+2024-12-11 17:41:43.209 [info] > git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname) [20ms]
+2024-12-11 17:41:43.218 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/master refs/remotes/master [45ms]
+2024-12-11 17:41:43.262 [warning] [Git][revParse] Unable to read file: ENOENT: no such file or directory, open '/home/sysadmin/work/ly/.git/refs/remotes/origin/master'
+2024-12-11 17:41:43.263 [info] > git status -z -uall [36ms]
+2024-12-11 17:41:43.263 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/main refs/remotes/main [46ms]
+2024-12-11 17:41:43.269 [info] > git merge-base refs/heads/main refs/remotes/origin/main [67ms]
+2024-12-11 17:41:43.279 [info] > git diff --name-status -z --diff-filter=ADMR 612b0384201fb5ebbca1a5c0691a645dad16fb24...refs/remotes/origin/main [3ms]
+2024-12-11 17:41:43.279 [info] > git config --local branch.main.vscode-merge-base [11ms]
+2024-12-11 17:41:43.279 [warning] [Git][config] git config failed: Failed to execute git
+2024-12-11 17:41:43.285 [info] > git rev-parse refs/remotes/origin/master [23ms]
+2024-12-11 17:41:43.298 [info] > git config --get commit.template [43ms]
+2024-12-11 17:41:43.298 [info] > git rev-parse --show-toplevel [50ms]
+2024-12-11 17:41:43.298 [info] fatal: not a git repository (or any parent up to mount point /)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+2024-12-11 17:41:43.298 [info] > git config --get commit.template [56ms]
+2024-12-11 17:41:43.298 [info] > git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname) [64ms]
+2024-12-11 17:41:43.306 [info] > git status -z -uall [14ms]
+2024-12-11 17:41:43.306 [info] > git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname) [8ms]
+2024-12-11 17:41:43.316 [info] > git reflog main --grep-reflog=branch: Created from *. [31ms]
+2024-12-11 17:41:43.343 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/master refs/remotes/master [28ms]
+2024-12-11 17:41:43.350 [info] > git rev-parse --show-toplevel [45ms]
+2024-12-11 17:41:43.358 [info] > git status -z -uall [259ms]
+2024-12-11 17:41:43.358 [info] > git config --local branch.master.vscode-merge-base [8ms]
+2024-12-11 17:41:43.364 [info] > git config --get commit.template [22ms]
+2024-12-11 17:41:43.364 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/main refs/remotes/main [29ms]
+2024-12-11 17:41:43.364 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/qa-add-logging-and-error-catch refs/remotes/qa-add-logging-and-error-catch [35ms]
+2024-12-11 17:41:43.373 [info] > git symbolic-ref --short refs/remotes/origin/HEAD [51ms]
+2024-12-11 17:41:43.373 [info] fatal: ref refs/remotes/origin/HEAD is not a symbolic ref
+2024-12-11 17:41:43.373 [warning] [Repository][getDefaultBranch] Failed to get default branch details: Failed to execute git.
+2024-12-11 17:41:43.390 [info] > git merge-base refs/heads/main refs/remotes/origin/main [11ms]
+2024-12-11 17:41:43.398 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/main refs/remotes/main [26ms]
+2024-12-11 17:41:43.406 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/origin/master refs/remotes/origin/master [42ms]
+2024-12-11 17:41:43.413 [info] > git rev-parse --git-dir --git-common-dir [56ms]
+2024-12-11 17:41:43.416 [info] [Model][openRepository] Opened repository: /home/sysadmin/work/pythonprojects
+2024-12-11 17:41:43.435 [info] > git merge-base refs/heads/master refs/remotes/origin/master [22ms]
+2024-12-11 17:41:43.441 [info] > git config --local branch.main.vscode-merge-base [36ms]
+2024-12-11 17:41:43.441 [warning] [Git][config] git config failed: Failed to execute git
+2024-12-11 17:41:43.447 [info] > git diff --name-status -z --diff-filter=ADMR 7a6a8ff556e3224ac3d7835572fec05eadad1753...refs/remotes/origin/main [49ms]
+2024-12-11 17:41:43.448 [info] > git config --get commit.template [59ms]
+2024-12-11 17:41:43.449 [info] > git diff --name-status -z --diff-filter=ADMR e125d8f1aa1544a6a106047c0acd7a7d2e0ff16c...refs/remotes/origin/master [8ms]
+2024-12-11 17:41:43.450 [info] > git rev-parse --show-toplevel [16ms]
+2024-12-11 17:41:43.450 [info] > git config --get commit.template [21ms]
+2024-12-11 17:41:43.450 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/master refs/remotes/master [27ms]
+2024-12-11 17:41:43.500 [warning] [Git][revParse] Unable to read file: ENOENT: no such file or directory, open '/home/sysadmin/work/ly/.git/refs/remotes/origin/master'
+2024-12-11 17:41:43.504 [info] > git reflog main --grep-reflog=branch: Created from *. [57ms]
+2024-12-11 17:41:43.519 [info] > git status -z -uall [62ms]
+2024-12-11 17:41:43.519 [info] > git rev-parse refs/remotes/origin/master [19ms]
+2024-12-11 17:41:43.534 [info] > git rev-parse --git-dir --git-common-dir [41ms]
+2024-12-11 17:41:43.539 [info] [Model][openRepository] Opened repository: /home/sysadmin/work/pythonprojects.old
+2024-12-11 17:41:43.539 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/main refs/remotes/main [54ms]
+2024-12-11 17:41:43.544 [info] > git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname) [63ms]
+2024-12-11 17:41:43.547 [info] > git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname) [85ms]
+2024-12-11 17:41:43.564 [info] > git status -z -uall [37ms]
+2024-12-11 17:41:43.564 [info] > git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname) [30ms]
+2024-12-11 17:41:43.567 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/main refs/remotes/main [50ms]
+2024-12-11 17:41:43.567 [info] > git symbolic-ref --short refs/remotes/origin/HEAD [56ms]
+2024-12-11 17:41:43.567 [info] fatal: ref refs/remotes/origin/HEAD is not a symbolic ref
+2024-12-11 17:41:43.567 [warning] [Repository][getDefaultBranch] Failed to get default branch details: Failed to execute git.
+2024-12-11 17:41:43.628 [info] > git check-ignore -v -z --stdin [44ms]
+2024-12-11 17:41:43.629 [info] > git check-ignore -v -z --stdin [36ms]
+2024-12-11 17:41:43.629 [info] > git check-ignore -v -z --stdin [30ms]
+2024-12-11 17:41:43.629 [info] > git check-ignore -v -z --stdin [21ms]
+2024-12-11 17:41:43.630 [info] > git check-ignore -v -z --stdin [15ms]
+2024-12-11 17:41:43.630 [info] > git check-ignore -v -z --stdin [6ms]
+2024-12-11 17:41:43.631 [info] > git merge-base refs/heads/main refs/remotes/origin/main [55ms]
+2024-12-11 17:41:43.639 [info] > git rev-parse --show-toplevel [75ms]
+2024-12-11 17:41:43.640 [info] > git config --get commit.template [82ms]
+2024-12-11 17:41:43.661 [info] > git diff --name-status -z --diff-filter=ADMR 781fdfba7c9f48e579cfd1c2771db24d277654ca...refs/remotes/origin/main [22ms]
+2024-12-11 17:41:43.685 [info] > git rev-parse --git-dir --git-common-dir [25ms]
+2024-12-11 17:41:43.688 [info] [Model][openRepository] Opened repository: /home/sysadmin/work/swarm-stack
+2024-12-11 17:41:43.717 [info] > git status -z -uall [1432ms]
+2024-12-11 17:41:43.718 [info] > git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname) [34ms]
+2024-12-11 17:41:43.718 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/StatusPage-From-flask-to-FastAPI refs/remotes/StatusPage-From-flask-to-FastAPI [46ms]
+2024-12-11 17:41:43.720 [info] > git rev-parse --show-toplevel [3ms]
+2024-12-11 17:41:43.720 [info] fatal: not a git repository (or any parent up to mount point /)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+2024-12-11 17:41:43.720 [info] > git config --get commit.template [8ms]
+2024-12-11 17:41:43.720 [info] > git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname) [18ms]
+2024-12-11 17:41:43.753 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/main refs/remotes/main [23ms]
+2024-12-11 17:41:43.783 [info] > git config --local branch.main.vscode-merge-base [18ms]
+2024-12-11 17:41:43.795 [info] > git config --get commit.template [42ms]
+2024-12-11 17:41:43.795 [info] > git rev-parse --show-toplevel [50ms]
+2024-12-11 17:41:43.851 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/origin/main refs/remotes/origin/main [56ms]
+2024-12-11 17:41:43.868 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/master refs/remotes/master [89ms]
+2024-12-11 17:41:43.896 [info] > git status -z -uall [199ms]
+2024-12-11 17:41:43.897 [info] > git merge-base refs/heads/main refs/remotes/origin/main [31ms]
+2024-12-11 17:41:43.905 [info] > git rev-parse --git-dir --git-common-dir [55ms]
+2024-12-11 17:41:43.909 [info] [Model][openRepository] Opened repository: /home/sysadmin/work/terraform
+2024-12-11 17:41:43.910 [info] > git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname) [77ms]
+2024-12-11 17:41:43.927 [info] > git status -z -uall [111ms]
+2024-12-11 17:41:43.927 [info] > git diff --name-status -z --diff-filter=ADMR bb80f7b5cd36f9f22609216b050e0e3e0210f081...refs/remotes/origin/main [22ms]
+2024-12-11 17:41:43.927 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/main refs/remotes/main [34ms]
+2024-12-11 17:41:43.969 [info] > git status -z -uall [290ms]
+2024-12-11 17:41:43.969 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/main refs/remotes/main [19ms]
+2024-12-11 17:41:43.977 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/StatusPage-From-flask-to-FastAPI refs/remotes/StatusPage-From-flask-to-FastAPI [38ms]
+2024-12-11 17:41:43.984 [info] > git rev-parse --show-toplevel [58ms]
+2024-12-11 17:41:43.984 [info] fatal: not a git repository (or any parent up to mount point /)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+2024-12-11 17:41:43.985 [info] > git config --get commit.template [67ms]
+2024-12-11 17:41:44.010 [info] > git status -z -uall [16ms]
+2024-12-11 17:41:44.010 [info] > git config --local branch.StatusPage-From-flask-to-FastAPI.vscode-merge-base [26ms]
+2024-12-11 17:41:44.016 [info] > git config --local branch.main.vscode-merge-base [39ms]
+2024-12-11 17:41:44.025 [info] > git config --get commit.template [57ms]
+2024-12-11 17:41:44.025 [info] > git config --get commit.template [64ms]
+2024-12-11 17:41:44.040 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/origin/main refs/remotes/origin/main [16ms]
+2024-12-11 17:41:44.051 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/origin/main refs/remotes/origin/main [35ms]
+2024-12-11 17:41:44.061 [info] > git rev-parse --show-toplevel [52ms]
+2024-12-11 17:41:44.061 [info] fatal: not a git repository (or any parent up to mount point /)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+2024-12-11 17:41:44.061 [info] > git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname) [60ms]
+2024-12-11 17:41:44.123 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/master refs/remotes/master [52ms]
+2024-12-11 17:41:44.129 [info] > git merge-base refs/heads/StatusPage-From-flask-to-FastAPI refs/remotes/origin/StatusPage-From-flask-to-FastAPI [68ms]
+2024-12-11 17:41:44.136 [info] > git merge-base refs/heads/main refs/remotes/origin/main [86ms]
+2024-12-11 17:41:44.145 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/implementing-waf-for-multi-region refs/remotes/implementing-waf-for-multi-region [107ms]
+2024-12-11 17:41:44.147 [info] > git diff --name-status -z --diff-filter=ADMR b5f05b0d411f09608e6f61cd6c2fa85c29bbc5f4...refs/remotes/origin/main [2ms]
+2024-12-11 17:41:44.148 [info] > git diff --name-status -z --diff-filter=ADMR 985d4f8ec45c4e5c8f14e2bd62a8f6c2549b11e5...refs/remotes/origin/StatusPage-From-flask-to-FastAPI [12ms]
+2024-12-11 17:41:44.148 [info] > git config --local branch.master.vscode-merge-base [19ms]
+2024-12-11 17:41:44.155 [info] > git config --get commit.template [33ms]
+2024-12-11 17:41:44.155 [info] > git rev-parse --show-toplevel [40ms]
+2024-12-11 17:41:44.155 [info] fatal: not a git repository (or any parent up to mount point /)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+2024-12-11 17:41:44.155 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/main refs/remotes/main [45ms]
+2024-12-11 17:41:44.155 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/StatusPage-From-flask-to-FastAPI refs/remotes/StatusPage-From-flask-to-FastAPI [53ms]
+2024-12-11 17:41:44.155 [info] > git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname) [58ms]
+2024-12-11 17:41:44.163 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/origin/master refs/remotes/origin/master [9ms]
+2024-12-11 17:41:44.582 [info] > git check-ignore -v -z --stdin [405ms]
+2024-12-11 17:41:44.583 [info] > git check-ignore -v -z --stdin [401ms]
+2024-12-11 17:41:44.583 [info] > git check-ignore -v -z --stdin [393ms]
+2024-12-11 17:41:44.583 [info] > git check-ignore -v -z --stdin [387ms]
+2024-12-11 17:41:44.584 [info] > git check-ignore -v -z --stdin [382ms]
+2024-12-11 17:41:44.584 [info] > git check-ignore -v -z --stdin [374ms]
+2024-12-11 17:41:44.584 [info] > git merge-base refs/heads/master refs/remotes/origin/master [416ms]
+2024-12-11 17:41:44.594 [info] > git rev-parse --show-toplevel [432ms]
+2024-12-11 17:41:44.594 [info] fatal: not a git repository (or any parent up to mount point /)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+2024-12-11 17:41:44.594 [info] [Model][doInitialScan] Initial repository scan completed - repositories (12), closed repositories (0), parent repositories (0), unsafe repositories (0)
+2024-12-11 17:41:44.628 [info] > git status -z -uall [22ms]
+2024-12-11 17:41:44.628 [info] > git diff --name-status -z --diff-filter=ADMR edb8758cca88ebbab2966e007f45c852d3bfe5e9...refs/remotes/origin/master [34ms]
+2024-12-11 17:41:44.628 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/master refs/remotes/master [47ms]
+2024-12-11 17:41:44.654 [info] > git rev-parse --show-toplevel [35ms]
+2024-12-11 17:41:44.654 [info] fatal: not a git repository (or any parent up to mount point /)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+2024-12-11 17:41:44.654 [info] > git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname) [41ms]
+2024-12-11 17:41:44.675 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/implementing-waf-for-multi-region refs/remotes/implementing-waf-for-multi-region [11ms]
+2024-12-11 17:41:44.682 [info] > git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname) [28ms]
+2024-12-11 17:41:44.682 [info] > git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname) [41ms]
+2024-12-11 17:41:44.703 [info] > git status -z -uall [56ms]
+2024-12-11 17:41:44.703 [info] > git config --local branch.implementing-waf-for-multi-region.vscode-merge-base [22ms]
+2024-12-11 17:41:44.711 [info] > git config --get commit.template [37ms]
+2024-12-11 17:41:44.726 [info] > git status -z -uall [8ms]
+2024-12-11 17:41:44.727 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/origin/main refs/remotes/origin/main [17ms]
+2024-12-11 17:41:44.733 [info] > git rev-parse --show-toplevel [30ms]
+2024-12-11 17:41:44.733 [info] fatal: not a git repository (or any parent up to mount point /)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+2024-12-11 17:41:44.753 [info] > git status -z -uall [119ms]
+2024-12-11 17:41:44.753 [info] > git merge-base refs/heads/implementing-waf-for-multi-region refs/remotes/origin/implementing-waf-for-multi-region [21ms]
+2024-12-11 17:41:44.760 [info] > git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname) [34ms]
+2024-12-11 17:41:44.765 [info] > git diff --name-status -z --diff-filter=ADMR fc0c1d2692d3a435ecfc3cd789d7c5e1891034d4...refs/remotes/origin/implementing-waf-for-multi-region [5ms]
+2024-12-11 17:41:44.765 [info] > git rev-parse --show-toplevel [12ms]
+2024-12-11 17:41:44.765 [info] fatal: not a git repository (or any parent up to mount point /)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+2024-12-11 17:41:44.765 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/implementing-waf-for-multi-region refs/remotes/implementing-waf-for-multi-region [18ms]
+2024-12-11 17:41:44.780 [info] > git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname) [1ms]
+2024-12-11 17:41:44.788 [info] > git status -z -uall [16ms]
+2024-12-11 17:41:45.584 [info] > git status -z -uall [1497ms]
+2024-12-11 17:41:45.733 [info] > git status -z -uall [2265ms]
+2024-12-11 17:41:46.062 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/qa-add-logging-and-error-catch refs/remotes/qa-add-logging-and-error-catch [320ms]
+2024-12-11 17:41:46.083 [info] > git config --local branch.qa-add-logging-and-error-catch.vscode-merge-base [16ms]
+2024-12-11 17:41:46.095 [info] > git config --get commit.template [34ms]
+2024-12-11 17:41:46.097 [info] > git rev-parse --show-toplevel [14ms]
+2024-12-11 17:41:46.097 [info] fatal: not a git repository (or any parent up to mount point /)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+2024-12-11 17:41:46.110 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/origin/main refs/remotes/origin/main [15ms]
+2024-12-11 17:41:46.145 [info] > git merge-base refs/heads/qa-add-logging-and-error-catch refs/remotes/origin/qa-add-logging-and-error-catch [18ms]
+2024-12-11 17:41:46.165 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/qa-add-logging-and-error-catch refs/remotes/qa-add-logging-and-error-catch [57ms]
+2024-12-11 17:41:46.170 [info] > git diff --name-status -z --diff-filter=ADMR 34de1e043ec086d0d611a71072115d3e9ac4e8b0...refs/remotes/origin/qa-add-logging-and-error-catch [5ms]
+2024-12-11 17:41:46.228 [info] > git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname) [29ms]
+2024-12-11 17:41:46.778 [info] > git show --textconv :scripts/disk_space_monitor.sh [10ms]
+2024-12-11 17:41:46.778 [info] > git ls-files --stage -- /home/sysadmin/work/AnsibleMCZR/scripts/disk_space_monitor.sh [1ms]
+2024-12-11 17:41:48.005 [info] > git status -z -uall [1819ms]
+2024-12-11 17:42:50.265 [info] > git rev-parse --show-toplevel [1ms]
+2024-12-11 17:42:50.265 [info] fatal: not a git repository (or any parent up to mount point /)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+2024-12-11 17:42:59.507 [info] > git show --textconv :scripts/disk_space_monitor.sh [7ms]
+2024-12-11 17:42:59.507 [info] > git ls-files --stage -- /home/sysadmin/work/AnsibleMCZR/scripts/disk_space_monitor.sh [1ms]
+2024-12-11 17:43:16.642 [info] > git show --textconv :roles/gitlab-runner/tasks/main.yml [11ms]
+2024-12-11 17:43:16.643 [info] > git ls-files --stage -- /home/sysadmin/work/AnsibleMCZR/roles/gitlab-runner/tasks/main.yml [3ms]
+2024-12-11 17:43:16.654 [info] > git cat-file -s 26bf27dcb7038bba3a78ba4251b9823fc5f9d032 [2ms]
+2024-12-11 17:43:16.917 [info] > git check-ignore -v -z --stdin [4ms]
+2024-12-11 17:43:17.496 [info] > git config --get commit.template [21ms]
+2024-12-11 17:43:17.500 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/main refs/remotes/main [6ms]
+2024-12-11 17:43:17.534 [info] > git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname) [4ms]
+2024-12-11 17:43:19.902 [info] > git status -z -uall [2385ms]
+2024-12-11 17:43:30.220 [info] > git check-ignore -v -z --stdin [7ms]
+2024-12-11 17:43:50.092 [info] > git show --textconv :scripts/disk_space_monitor.sh [9ms]
+2024-12-11 17:43:50.093 [info] > git ls-files --stage -- /home/sysadmin/work/AnsibleMCZR/scripts/disk_space_monitor.sh [2ms]
+2024-12-12 08:07:40.305 [info] > git rev-parse --show-toplevel [7ms]
+2024-12-12 08:07:40.305 [info] fatal: not a git repository (or any parent up to mount point /)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+2024-12-12 10:10:45.188 [info] > git config --get commit.template [19ms]
+2024-12-12 10:10:45.192 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/main refs/remotes/main [5ms]
+2024-12-12 10:10:45.232 [info] > git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname) [4ms]
+2024-12-12 10:10:47.768 [info] > git status -z -uall [2558ms]
+2024-12-12 10:13:35.726 [info] > git config --get commit.template [20ms]
+2024-12-12 10:13:35.730 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/main refs/remotes/main [6ms]
+2024-12-12 10:13:35.765 [info] > git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname) [3ms]
+2024-12-12 10:13:38.160 [info] > git status -z -uall [2412ms]
+2024-12-12 10:38:41.834 [info] > git config --get commit.template [21ms]
+2024-12-12 10:38:41.838 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/main refs/remotes/main [6ms]
+2024-12-12 10:38:41.876 [info] > git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname) [4ms]
+2024-12-12 10:38:44.139 [info] > git status -z -uall [2280ms]
+2024-12-12 10:40:47.603 [info] > git config --get commit.template [21ms]
+2024-12-12 10:40:47.605 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/main refs/remotes/main [5ms]
+2024-12-12 10:40:47.647 [info] > git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname) [5ms]
+2024-12-12 10:40:49.744 [info] > git status -z -uall [2119ms]
+2024-12-12 10:59:06.156 [info] > git rev-parse --show-toplevel [3ms]
+2024-12-12 10:59:06.156 [info] fatal: not a git repository (or any parent up to mount point /)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+2024-12-12 10:59:06.469 [info] > git rev-parse --show-toplevel [2ms]
+2024-12-12 10:59:06.469 [info] fatal: not a git repository (or any parent up to mount point /)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+2024-12-12 10:59:07.020 [info] > git rev-parse --show-toplevel [1ms]
+2024-12-12 10:59:07.020 [info] fatal: not a git repository (or any parent up to mount point /)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).

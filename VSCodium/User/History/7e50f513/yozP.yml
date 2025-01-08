@@ -1,0 +1,120 @@
+---
+- name: Include APT
+  ansible.builtin.import_tasks: apt.yml
+  when:
+    - ansible_facts['os_family'] == "Debian"
+
+- name: add docker group to gitlab-runner user
+  user:
+    name: gitlab-runner
+    groups: docker
+    append: yes
+
+- name: Installer la cle ssh de gitlab-runner
+  copy:
+    src: "../inventories/keys/gitlab-runner_id_rsa"
+    dest: /home/gitlab-runner/.ssh/id_rsa
+    mode: 0600
+    owner: gitlab-runner
+
+- name: Installer la cle ssh de releasemanager
+  copy:
+    src: "../inventories/keys/releasemanager_id_rsa"
+    dest: /home/releasemanager/.ssh/id_rsa
+    mode: 0600
+    owner: releasemanager
+
+- name: Set includedir in sudoers
+  lineinfile:
+    dest: /etc/sudoers
+    line: "#includedir /etc/sudoers.d"
+    state: present
+    validate: "/usr/sbin/visudo -cf %s"
+
+- name: Allow the gitlab-runner user to chown some folders
+  community.general.sudoers:
+    name: allow-chown
+    state: present
+    user: gitlab-runner
+    commands:
+      - /bin/chown gitlab-runner -R screenshots-e2e
+      - /bin/chown gitlab-runner -R screenshots-e2e-visual
+      - /bin/chown gitlab-runner -R dist
+      - /bin/chown gitlab-runner -R public
+      - /bin/chown gitlab-runner -R playwright-report
+
+
+- name: Create /usr/local/bin/ directory if it does not exist
+  file:
+    path: /usr/local/bin/
+    state: directory
+    mode: '0755'
+    group: root
+    owner: root
+
+- name: Install disk_space_monitor.sh
+  copy:
+    src: "../scripts/disk_space_monitor.sh"
+    dest: /usr/local/bin/disk_space_monitor.sh
+    mode: 0700
+    owner: root
+
+- name: Cron Clean old docker images and registry
+  cron:
+    name: "Clean old docker imagesand registry"
+    user: "root"
+    minute: "00"
+    job: "/usr/local/bin/disk_space_monitor.sh >> /var/log/disk_cleanup.log 2>&1"
+    state: present
+
+- name: Cron Clean old docker images
+  cron:
+    name: "Clean old docker images"
+    user: "gitlab-runner"
+    minute: "10"
+    hour: "13"
+    job: 'docker image prune --all --force --filter "until={{ docker_images_retention }}" > /var/log/gitlab-runner/docker_image_prune.log 2>&1'
+    state: absent
+
+- name: Cron Clean docker system
+  cron:
+    name: "Clean docker system"
+    user: "gitlab-runner"
+    minute: "20"
+    hour: "13"
+    job: 'docker system prune --all --force --filter "until={{ docker_images_retention }}" > /var/log/gitlab-runner/docker_system_prune.log 2>&1'
+    state: absent
+
+- name: Cron Clean docker volumes
+  cron:
+    name: "Clean docker volumes"
+    user: "gitlab-runner"
+    minute: "40"
+    hour: "13"
+    job: "docker system prune --all --volumes --force > /var/log/gitlab-runner/docker_system_prune.log 2>&1"
+    state: absent
+
+- name: Docker registry garbage collector
+  cron:
+    name: "Clean docker registry"
+    user: "gitlab-runner"
+    minute: "45"
+    hour: "12"
+    job: '{% raw %} docker exec -i $(docker ps --format "{{.Names}}" | grep registry) registry garbage-collect /etc/docker/registry/config.yml -m {% endraw %}'
+    state: absent
+
+- name: Clean docker old nodes in autoscaler
+  cron:
+    name: "Clean docker nodes"
+    user: "gitlab-runner"
+    minute: "30"
+    job: '{% raw %} docker node rm $(docker node ls | grep Down | cut -d " " -f 1) {% endraw %}'
+    state: present
+
+- name: delete a file (or symlink) if it exists
+  file:
+    path: /home/gitlab-runner/.bash_logout
+    state: absent
+  when:
+    - ansible_facts['distribution'] == "Ubuntu"
+    - ansible_facts['distribution_major_version'] >= "20"

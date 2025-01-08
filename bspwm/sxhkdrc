@@ -24,10 +24,13 @@ super + f
 	thunar
 
 super + e
-	zed
+	code
 
 super + g
 	gimp
+
+super + k
+	flatpak run org.kde.krita
 
 super + v
    tilix -e pulsemixer
@@ -37,6 +40,9 @@ super + d
 
 super + o
 	obs
+
+super + l
+	light-locker-command -l
 
 # set the window state
 super + shift + {t,s,f}
@@ -73,6 +79,15 @@ super + {1-8}
 
 super + shift + {1-8}
     bspc node --to-desktop} ^{1-8} --focus
+
+# Switch to the desktop on the left
+super + alt + Left
+    bspc desktop -f prev
+
+# Switch to the desktop on the right
+super + alt + Right
+    bspc desktop -f next
+
 
 
 # Resize tiling windows

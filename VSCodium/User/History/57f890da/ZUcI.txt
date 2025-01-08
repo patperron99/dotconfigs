@@ -1,0 +1,88 @@
+Production:
+  api:
+      DBURL: "mongodb://mdb03.prd.oh.12punch.biz:27017,mdb02.prd.oh.12punch.biz:27017,mdb01.prd.oh.12punch.biz:27017/"
+      RESSOURCES_BASE_URL: "https://cdnv2.mycustomizer.com"
+      STORAGE_UPLOAD_STRATEGY: aws
+      SHOPIFY_DOMAIN: "https://s.mycustomizer.com"
+      DOMAIN: mycustomizer.com
+      REPLSET: "replicaA"
+      LOGHOST: "grayproxy"
+      LOGPORT: 12201
+      TLS_LOGPORT: 12211
+      TLS_LOGHOST: "monitor-dkr.12punch.biz"
+      FACILITY: API
+      JOBS_SUBDOMAIN: "apijobs"
+      LOG_STRATEGY: "betterstack"
+      BETTER_STACK_TOKEN: "XzBqxxBaYqRJiJVFPK1qB1k7"
+      ANALYTICS_SUBDOMAIN: "perf-api"
+      WIX_ECOMMERCE_USER_EMAIL: "wix@gokickflip.com"
+      SHOPIFY_ECOMMERCE_USER_EMAIL: "shopify@gokickflip.com"
+ 
+  websites:
+      DOMAIN: mycustomizer.com
+      NODE_ENV: prod
+      LOGHOST: "grayproxy"
+      LOGPORT: 12201
+      TLS_LOGPORT: 12211
+      TLS_LOGHOST: "monitor-dkr.12punch.biz"
+      FACILITY: websites
+      LOG_STRATEGY: "betterstack"
+      BETTER_STACK_TOKEN: "XzBqxxBaYqRJiJVFPK1qB1k7"
+      NODE_CONFIG_ENV: "production"
+
+ 
+  api-perf:
+      DBURL: "mongodb://mdb03.prd.oh.12punch.biz:27017,mdb02.prd.oh.12punch.biz:27017,mdb01.prd.oh.12punch.biz:27017/"
+      RESSOURCES_BASE_URL: "https://cdnv2.mycustomizer.com"
+      STORAGE_UPLOAD_STRATEGY: aws
+      SHOPIFY_DOMAIN: "https://s.mycustomizer.com"
+      DOMAIN: mycustomizer.com
+      REPLSET: "replicaA"
+      LOGHOST: "grayproxy"
+      LOGPORT: 12201
+      TLS_LOGPORT: 12211
+      TLS_LOGHOST: "monitor-dkr.12punch.biz"
+      FACILITY: PERF-API
+      JOBS_SUBDOMAIN: "apijobs"
+      LOG_STRATEGY: "betterstack"
+      BETTER_STACK_TOKEN: "XzBqxxBaYqRJiJVFPK1qB1k7"
+      ANALYTICS_SUBDOMAIN: "perf-api"
+      SUBDOMAIN: "perf-api"
+ 
+  cron: 
+      DBURL: "mongodb://mdb03.prd.oh.12punch.biz:27017,mdb02.prd.oh.12punch.biz:27017,mdb01.prd.oh.12punch.biz:27017/"
+      RESSOURCES_BASE_URL: "https://cdnv2.mycustomizer.com"
+      STORAGE_UPLOAD_STRATEGY: aws
+      SHOPIFY_DOMAIN: "https://s.mycustomizer.com"
+      DOMAIN: mycustomizer.com
+      REPLSET: "replicaA"
+      LOGHOST: "grayproxy"
+      LOGPORT: 12201
+      TLS_LOGPORT: 12211
+      TLS_LOGHOST: "monitor-dkr.12punch.biz"
+      FACILITY: cron
+      LOG_STRATEGY: "betterstack"
+      BETTER_STACK_TOKEN: "XzBqxxBaYqRJiJVFPK1qB1k7"
+
+  DbMigration:
+      DBURL: "mongodb://mdb03.prd.oh.12punch.biz:27017,mdb02.prd.oh.12punch.biz:27017,mdb01.prd.oh.12punch.biz:27017/"
+      DOMAIN: mycustomizer.com
+      REPLSET: "replicaA"
+      LOGHOST: "grayproxy"
+      LOGPORT: 12201
+      TLS_LOGPORT: 12211
+      TLS_LOGHOST: "monitor-dkr.12punch.biz"
+      FACILITY: migration
+      LOG_STRATEGY: "betterstack"
+      BETTER_STACK_TOKEN: "XzBqxxBaYqRJiJVFPK1qB1k7"
+
+  Shopify:
+      LOGHOST: "grayproxy"
+      LOGPORT: 12201
+      TLS_LOGPORT: 12211
+      TLS_LOGHOST: "monitor-dkr.12punch.biz"
+      FACILITY: shopify-connector
+      LOG_STRATEGY: "betterstack"
+      BETTER_STACK_TOKEN: "XzBqxxBaYqRJiJVFPK1qB1k7"
+      SHOPIFY_ECOMMERCE_USER_EMAIL: "shopify@gokickflip.com"
+ 
