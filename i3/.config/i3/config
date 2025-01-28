@@ -1,0 +1,16 @@
+include $HOME/.config/i3/workspaces.conf
+include $HOME/.config/i3/rules.conf
+
+set $mod mod4
+font pango:Noto Sans 12
+
+exec_always --no-startup-id ~/.config/i3/autostart.sh
+
+# Use Mouse+$mod to drag floating windows to their wanted position
+floating_modifier $mod
+
+# Scratchpad
+for_window [class="ttrm"] move scratchpad
+bindsym $mod+s [class="ttrm"] scratchpad show, move position center
+bindsym $mod+Shift+s exec --no-startup-id "alacritty --class ttrm,ttrm"
+
