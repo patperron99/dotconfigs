@@ -8,7 +8,8 @@ sxhkd -c ~/.config/i3/sxhkdrc &
 ~/.config/i3/polybar-i3 &
 
 # wallpaper
-feh --bg-fill /usr/share/wallpapers/default &
+# feh --bg-fill /usr/share/wallpapers/default &
+feh --bg-fill ~/.config/backgrounds/wallhaven-x6775z.png
 
 # compositor and notifications
 picom -b &
