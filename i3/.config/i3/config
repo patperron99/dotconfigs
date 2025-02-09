@@ -1,7 +1,9 @@
+include $HOME/.config/i3/keymaps.conf
 include $HOME/.config/i3/workspaces.conf
 include $HOME/.config/i3/rules.conf
 
-set $mod mod4
+set $mod Mod4
+set $alt Mod1
 font pango:Noto Sans 12
 
 exec_always --no-startup-id ~/.config/i3/autostart.sh
