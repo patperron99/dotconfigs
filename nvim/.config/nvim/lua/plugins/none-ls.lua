@@ -19,7 +19,10 @@ return {
         null_ls.builtins.diagnostics.ansiblelint,
 
         -- Bash linting and formatting
-        null_ls.builtins.formatting.beautysh,    -- Bash formatter
+        null_ls.builtins.formatting.shfmt.with({
+            extra_args = { "-i", "4" } -- Set indentation to 4 spaces (change as needed)
+        }),
+        -- null_ls.builtins.formatting.beautysh,    -- Bash formatter
         null_ls.builtins.diagnostics.shellcheck, -- Bash linter
       },
     })
