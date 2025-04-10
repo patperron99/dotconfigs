@@ -1,0 +1,33 @@
+-- codestral.lua
+return {
+  "codestral/codestral.nvim",
+  dependencies = {
+    "nvim-lua/plenary.nvim",
+    "MunifTanjim/nui.nvim",
+  },
+  config = function()
+    -- Retrieve the API key from an environment variable
+    local api_key = vim.env.CODESTRAL_API_KEY
+    if not api_key then
+      vim.notify("Codestral API key not set. Please set the CODESTRAL_API_KEY environment variable.", vim.log.levels.ERROR)
+      return
+    end
+
+    require("codestral").setup({
+      -- Configuration options for Codestral
+      api_key = api_key,
+      chat = {
+        enable = true,
+        -- Additional chat configuration options
+      },
+      coding_assistant = {
+        enable = true,
+        -- Additional coding assistant configuration options
+      },
+    })
+
+    -- Key mappings for Codestral
+    vim.api.nvim_set_keymap("n", "<leader>cc", "<cmd>CodestralChatToggle<CR>", { noremap = true, silent = true })
+    vim.api.nvim_set_keymap("i", "<C-Space>", "<cmd>CodestralCodingAssistantToggle<CR>", { noremap = true, silent = true })
+  end,
+}
