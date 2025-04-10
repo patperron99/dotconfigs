@@ -1,3 +1,8 @@
+# Load environment variables from .env file
+if [ -f ~/.env ]; then
+    export $(cat ~/.env | xargs)
+fi
+
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
@@ -113,20 +118,6 @@ set_prompt() {
 
 # Set up prompt command
 PROMPT_COMMAND=set_prompt
-# # Custom Catppuccin two-line prompt
-# RESET="\[\e[0m\]"
-# PURPLE="\[\e[38;5;140m\]"
-# PINK="\[\e[38;5;212m\]"
-# CYAN="\[\e[38;5;37m\]"
-# GREEN="\[\e[38;5;107m\]"
-# YELLOW="\[\e[38;5;214m\]"
-# SKY="\[\e[38;5;74m\]"
-# parse_git_branch() {
-#   branch=$(git branch 2>/dev/null | grep '*' | sed 's/* //')
-#   if [[ -n "$branch" ]]; then
-#     echo "[$(git branch 2>/dev/null | grep '*' | sed 's/* //')]"
-#   fi
-# }
 
 tmux_ssh() {
   if [[ -z $1 ]]; then
@@ -154,11 +145,11 @@ tmux_nvim() {
   if [ $? != 0 ]; then
     tmux new-session -d -s neovim-session
   fi
-  tmux new-window -t neovim-session -n "$tab_name" "nvim $1"
+  tmux new-window -t neovim-session -n "$tab_name" "OPENAI_API_KEY=\"$OPENAI_API_KEY\" nvim $1"
   tmux attach-session -t neovim-session 
 }
 
-PS1="${PURPLE}\u${RESET}@${SKY}\h ${PINK}\w${YELLOW} \$(parse_git_branch)${RESET}\n${GREEN}➜ ${RESET}"
+# PS1="${PURPLE}\u${RESET}@${SKY}\h ${PINK}\w${YELLOW} \$(parse_git_branch)${RESET}\n${GREEN}➜ ${RESET}"
 
 if ! shopt -oq posix; then
   if [ -f /usr/share/bash-completion/bash_completion ]; then

@@ -11,7 +11,7 @@ check_updates() {
     
     if [ "$updates" -gt 0 ]; then
         # Red icon if updates available
-        echo "%{F#ff0000}%{F-}"
+        echo "%{F#f38ba8}%{F-}"
     else
         # Gray icon if no updates
         echo "%{F#666666}%{F-}"

@@ -2,6 +2,7 @@ return {
   "nvimtools/none-ls.nvim",
   config = function()
     local null_ls = require("null-ls")
+
     null_ls.setup({
       sources = {
         null_ls.builtins.formatting.stylua,
@@ -27,6 +28,28 @@ return {
       },
     })
 
+    -- Function to toggle null-ls for the current buffer
+    local function toggle_null_ls()
+      local clients = vim.lsp.get_active_clients({ bufnr = 0 })
+      for _, client in ipairs(clients) do
+        if client.name == "null-ls" then
+          if client.is_stopped() then
+            client.start()
+            print("null-ls enabled for the current buffer")
+          else
+            client.stop()
+            print("null-ls disabled for the current buffer")
+          end
+          return
+        end
+      end
+      print("null-ls is not active in the current buffer")
+    end
+
+    -- Map the function to a key combination, e.g., <leader>tn
+    vim.keymap.set("n", "<leader>tn", toggle_null_ls, { noremap = true, silent = true })
+
+    -- Existing key mapping for formatting
     vim.keymap.set("n", "<leader>gf", vim.lsp.buf.format, {})
   end,
 }

@@ -27,3 +27,5 @@ require("lazy").setup("plugins", {
 require("core.options")
 require("core.keymaps")
 
+-- Avante options
+vim.env.OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
