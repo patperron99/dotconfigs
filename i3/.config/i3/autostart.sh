@@ -1,5 +1,5 @@
 # Autostart applications
-/usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1 &
+/usr/bin/lxpolkit &
 
 # bar start
 ~/.config/i3/polybar-i3 &
