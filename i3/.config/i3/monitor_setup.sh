@@ -3,17 +3,20 @@
 # get active workspace
 active_workspace=$(i3-msg -t get_workspaces | jq -r '.[] | select(.focused==true).name')
 
-DEVICE_TYPE=$(hostnamectl chassis)
-if [[ "$DEVICE_TYPE" == "notebook" || "$DEVICE_TYPE" == "laptop" ]]; then
-    DEVICE_TYPE="laptop"
-    PRIMARY="eDP-1"
-    SECONDARY="DP-3"
+# DEVICE_TYPE=$(hostnamectl chassis)
+# if [[ "$DEVICE_TYPE" == "notebook" || "$DEVICE_TYPE" == "laptop" ]]; then
+#     DEVICE_TYPE="laptop"
+#     PRIMARY="eDP-1"
+#     SECONDARY="DP-3"
 
-else
-    DEVICE_TYPE="desktop"
-    PRIMARY="DisplayPort-2"
-    SECONDARY="HDMI-A-0"
-fi
+# else
+#     DEVICE_TYPE="desktop"
+#     PRIMARY="DisplayPort-2"
+#     SECONDARY="HDMI-A-0"
+# fi
+
+PRIMARY=$PRIMARY_MONITOR
+SECONDARY=$SECONDARY_MONITOR
 
 
 is_mode_exist=$(xrandr | grep "1920x1080R")

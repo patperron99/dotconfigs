@@ -1,0 +1,36 @@
+# Define your monitors
+set $primarymonitor "DP-3"
+set $secondarymonitor "HDMI-A-1"
+
+output $primarymonitor res 1920x1080 pos 0 0
+output $secondarymonitor res 1920x1080 pos 1920 0
+
+set $mod Mod4
+set $alt Mod1
+font pango:Fira Code 12
+
+# exec_always dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSOCK XDG_CURRENT_DESKTOP
+# exec_always export XDG_CURRENT_DESKTOP=sway
+# exec_always export GTK_THEME=Nordic-master
+# exec_always export XCURSOR_THEME=Nordic-cursors
+# exec_always export XDG_DATA_DIRS=/usr/share
+# exec_always nm-applet --indicator
+
+include $HOME/.config/sway/keymaps.conf
+include $HOME/.config/sway/rules.conf
+include $HOME/.config/sway/workspaces.conf
+
+
+exec_always --no-startup-id ~/.config/sway/scripts/autostart.sh
+
+# Import setting from saved lxappearance gtk-3
+exec_always --no-startup-id ~/.config/sway/scripts/import-gsettings.sh
+
+# Use Mouse+$mod to drag floating windows to their wanted position
+floating_modifier $mod
+
+
+bar { 
+     swaybar_command waybar
+}
+

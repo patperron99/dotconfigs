@@ -1,6 +1,10 @@
+# Define your monitors
+set $primarymonitor "DisplayPort-2"
+set $secondarymonitor "HDMI-A-0"
+
 include $HOME/.config/i3/keymaps.conf
-include $HOME/.config/i3/workspaces.conf
 include $HOME/.config/i3/rules.conf
+include $HOME/.config/i3/workspaces.conf
 
 set $mod Mod4
 set $alt Mod1
