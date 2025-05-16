@@ -1,42 +1,50 @@
 * {
   font-family: "FiraCode Nerd Font", FontAwesome;
-  font-size: 13px;
+  font-size: 15px;
   border: none;
   border-radius: 0;
   padding: 2px 5px;
 }
 
 #waybar {
-  background: rgba(25, 25, 35, 0.85);   /* semi-transparent background */
-  border-radius: 4px;                  /* rounded corners */
+  /* background: rgba(46, 52, 64, 0.8);   /1* semi-transparent background *1/ */
+  background: rgba(0, 0, 0, 0.5);   /* semi-transparent background */
+  border-radius: 8px;                  /* rounded corners */
   margin: 8px;                     /* outer gap (top/bottom, left/right) */
-  padding: 4px 10px;                    /* inner padding */
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);  /* optional shadow */
-  color: #cdd6f4;
+  padding: 2px;                    /* inner padding */
+  color: #88C0D0; /* Nord1 */
 }
 
 #workspaces button {
-  padding: 0 5px;
-  margin: 0 2px;
+  padding: 0px 8px;
   background: transparent;
-  color: #cdd6f4;
+  color: #88C0D0; /* Nord1 */
+  border-radius: 8px;
 }
 
 #workspaces button.focused {
-  background-color: #6272A4;
-  color: #1a1a1a;
-  border-bottom: 2px solid #cba6f7;
+  background-color: #2e3440; /* Nord10 */
+  color: #5e81ac; /* Nord1 */
+  border-bottom: 1px solid #5e81ac; /* Nord7 */
 }
 
 #workspaces button.urgent {
-  background-color: #f38ba8;
-  color: #1a1a1a;
+  background-color: #BF616A; /* Nord11 */
+  color: #2E3440; /* Nord1 */
 }
 
-#idle_inhibitor, #pulseaudio, #cpu, #memory, #battery, #network, #bluetooth {
-  color: #cdd6f4;
+#idle_inhibitor, #pulseaudio, #cpu, #memory, #battery, #network, #bluetooth, #clock {
+  color: #5e81ac; /* Nord1 */
+  background-color: #2e3440; /* Nord10 */
+  border-radius: 8px;
+  padding: 3px 6px;
+  margin: 2px 4px;
+}
+
+#tray {
+  margin: 4px;
 }
 
 #custom-separator {
-  color: #6272A4;
+  color: #5E81AC; /* Nord10 */
 }

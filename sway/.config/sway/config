@@ -1,4 +1,4 @@
-# Define your monitors
+# Defin  you  monitor 
 set $primarymonitor "DP-3"
 set $secondarymonitor "HDMI-A-1"
 
@@ -9,12 +9,12 @@ set $mod Mod4
 set $alt Mod1
 font pango:Fira Code 12
 
-# exec_always dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSOCK XDG_CURRENT_DESKTOP
-# exec_always export XDG_CURRENT_DESKTOP=sway
-# exec_always export GTK_THEME=Nordic-master
-# exec_always export XCURSOR_THEME=Nordic-cursors
-# exec_always export XDG_DATA_DIRS=/usr/share
-# exec_always nm-applet --indicator
+# exec dbus-run-session sway
+exec_always dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSOCK XDG_CURRENT_DESKTOP
+exec_always export XDG_CURRENT_DESKTOP=sway
+exec_always export GTK_THEME=Nordic-master
+exec_always export XCURSOR_THEME=Nordic-cursors
+exec_always export XDG_DATA_DIRS=/usr/share
 
 include $HOME/.config/sway/keymaps.conf
 include $HOME/.config/sway/rules.conf
