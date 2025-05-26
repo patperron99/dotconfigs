@@ -6,7 +6,7 @@
 
 # wallpaper
 # feh --bg-fill /usr/share/wallpapers/default &
-feh --bg-fill ~/.config/backgrounds/bison.jpg
+feh --bg-fill ~/.config/backgrounds/default &
 
 # compositor and notifications
 picom -b &
@@ -15,6 +15,7 @@ dunst &
 blueman-applet &
 nm-applet &
 if ! pgrep -x "flameshot" > /dev/null; then flameshot & fi
+if ! pgrep -x "autotiling" > /dev/null; then autotiling & fi
 
 # Configure monitors
 exec ~/.config/i3/monitor_setup.sh
