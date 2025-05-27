@@ -12,6 +12,7 @@
     "network",
     "custom/vpn",
     "bluetooth",
+    "battery",
     "tray"
     ],
   "margin-top": 4,
@@ -79,15 +80,17 @@
   },
 
   "battery": {
+    "interval": 2,
     "states": {
-      "good": 80,
-      "warning": 30,
-      "critical": 15
+        "warning": 25,
+        "critical": 15
     },
-    "format": "{capacity}% {icon}",
-    "format-charging": " {capacity}%",
+    "format": "{icon}{capacity: >3}%",
+    "format-charging": " {capacity}%",
+    "format-plugged": " {capacity}%",
+    "format-full": " {icon}{capacity}%",
     "format-icons": ["", "", "", "", ""]
-  },
+    },
 
   "clock": {
     "format-alt": "{:%H:%M}",
