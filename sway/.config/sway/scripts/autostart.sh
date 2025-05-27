@@ -8,4 +8,3 @@ swaybg -i ~/.config/backgrounds/default
 
 numlockx on &
 
-exec_always autotiling

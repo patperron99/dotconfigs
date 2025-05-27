@@ -7,25 +7,32 @@
 }
 
 #waybar {
-  /* background: rgba(46, 52, 64, 0.8);   /1* semi-transparent background *1/ */
-  background: rgba(0, 0, 0, 0.5);   /* semi-transparent background */
-  border-radius: 8px;                  /* rounded corners */
+  background: rgba(46, 52, 64, 0.0);   /* semi-transparent background */
+  /* background: rgba(0, 0, 0, 0.5);   /1* semi-transparent background *1/ */
+  border-radius: 4px;                  /* rounded corners */
   margin: 8px;                     /* outer gap (top/bottom, left/right) */
   padding: 2px;                    /* inner padding */
-  color: #88C0D0; /* Nord1 */
+  /* color: #88C0D0; /1* Nord1 *1/ */
+  color: #eceff4;
+}
+
+#workspaces {
+  background-color: #4c566a;/* Nord10 */
+  padding: 0px 8px;
+  border-radius: 4px;
+  border-top: 1px solid #d08770; /* Nord7 */
 }
 
 #workspaces button {
   padding: 0px 8px;
   background: transparent;
-  color: #88C0D0; /* Nord1 */
-  border-radius: 8px;
+  color: #D8DEE9; /* Nord1 */
+  border-radius: 4px;
 }
 
 #workspaces button.focused {
   background-color: #2e3440; /* Nord10 */
   color: #5e81ac; /* Nord1 */
-  border-bottom: 1px solid #5e81ac; /* Nord7 */
 }
 
 #workspaces button.urgent {
@@ -33,17 +40,25 @@
   color: #2E3440; /* Nord1 */
 }
 
-#idle_inhibitor, #pulseaudio, #cpu, #memory, #battery, #network, #bluetooth, #clock {
-  color: #5e81ac; /* Nord1 */
-  background-color: #2e3440; /* Nord10 */
-  border-radius: 8px;
-  padding: 3px 6px;
-  margin: 2px 4px;
+#custom-vpn, #idle_inhibitor, #pulseaudio, #cpu, #memory, #battery, #network, #bluetooth, #clock {
+  color: #D8DEE9; /* Nord1 */
+  background-color: #4c566a; /* Nord10 */
+  border-radius: 4px;
+  /* border-radius: 0px 4px 4px 0px; */
+  padding: 3px 10px;
+  margin: 2px 2px;
+  /* border-right: 1px solid rgba(208, 135, 112, 0.9); */
+  border-top: 1px solid #d08770;
 }
 
 #tray {
-  margin: 4px;
-}
+  color: #D8DEE9; /* Nord1 */
+  background-color: #2e3440; /* Nord10 */
+  border-radius: 4px;
+  padding: 3px 6px;
+  margin: 2px 4px;
+  border: 1px solid #a3be8c; /* Nord7 */
+ }
 
 #custom-separator {
   color: #5E81AC; /* Nord10 */

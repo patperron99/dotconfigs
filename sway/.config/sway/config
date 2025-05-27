@@ -18,7 +18,7 @@ exec_always export XDG_DATA_DIRS=/usr/share
 
 include $HOME/.config/sway/keymaps.conf
 include $HOME/.config/sway/rules.conf
-include $HOME/.config/sway/workspaces.conf
+include $HOME/.config/sway/workspaces-desktop.conf
 
 
 exec_always --no-startup-id ~/.config/sway/scripts/autostart.sh
@@ -34,3 +34,13 @@ bar {
      swaybar_command waybar
 }
 
+
+# PipeWire (audio)
+exec wireplumber
+exec pipewire
+exec pipewire-pulse
+
+# XDG Desktop Portal for screen sharing
+exec xdg-desktop-portal-wlr
+
+exec_always autotiling
