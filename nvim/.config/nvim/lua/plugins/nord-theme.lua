@@ -20,7 +20,7 @@ return {
 
         -- Adjust transparency percentage (0-100%)
         local alpha = 0.9 -- 90% transparency
-        vim.cmd('highlight Normal guibg=#000000') -- Set background color with alpha
-        vim.cmd('highlight NonText guibg=#000000') -- Set background color with alpha
+        -- vim.cmd('highlight Normal guibg=#000000') -- Set background color with alpha
+        -- vim.cmd('highlight NonText guibg=#000000') -- Set background color with alpha
     end
 }
