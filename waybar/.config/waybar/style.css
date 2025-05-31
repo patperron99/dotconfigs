@@ -18,7 +18,10 @@
 
 #window {
   color: #D8DEE9; /* Nord1 */
-  padding: 0px 8px;
+  padding: 3px 10px;
+  margin: 2px 2px;
+  border: 1px solid #88c0d0;
+  border-radius: 4px;
 }
 
 #workspaces {
@@ -44,7 +47,7 @@
   color: #2E3440; /* Nord1 */
 }
 
-#custom-vpn, #idle_inhibitor, #pulseaudio, #cpu, #memory, #battery, #network, #bluetooth, #clock {
+#backlight, #custom-vpn, #idle_inhibitor, #pulseaudio, #cpu, #memory, #battery, #network, #bluetooth, #clock {
   color: #D8DEE9; /* Nord1 */
   /* background-color: #4c566a; /1* Nord10 *1/ */
   border-radius: 4px;

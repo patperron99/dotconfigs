@@ -10,6 +10,7 @@ set $alt Mod1
 font pango:Fira Code 12
 
 # exec dbus-run-session sway
+exec xdg-desktop-portal-wlr
 exec_always dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSOCK XDG_CURRENT_DESKTOP
 exec_always export XDG_CURRENT_DESKTOP=sway
 exec_always export GTK_THEME=Nordic-master
@@ -18,7 +19,7 @@ exec_always export XDG_DATA_DIRS=/usr/share
 
 include $HOME/.config/sway/keymaps.conf
 include $HOME/.config/sway/rules.conf
-include $HOME/.config/sway/workspaces-desktop.conf
+include $HOME/.config/sway/workspaces.conf
 
 
 exec_always --no-startup-id ~/.config/sway/scripts/autostart.sh
@@ -40,7 +41,6 @@ exec wireplumber
 exec pipewire
 exec pipewire-pulse
 
-# XDG Desktop Portal for screen sharing
-exec xdg-desktop-portal-wlr
+exec xdg-desktop-portal
 
 exec_always autotiling

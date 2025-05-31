@@ -1,5 +1,5 @@
 {
-  "output": "DP-3",
+  "output": "eDP-1",
   "layer": "top",
   "position": "top",
   "modules-left": ["clock", "sway/window"],
@@ -12,6 +12,7 @@
     "network",
     "custom/vpn",
     "bluetooth",
+    "backlight",
     "battery",
     "tray"
     ],
@@ -35,17 +36,16 @@
   },
 
   "sway/window": {
-    "format": "{}",
-    "max-length": 80
+    "format": "{title}",
+    "max-length": 50,
+    "offscreen-css": true
   },
 
   "pulseaudio": {
     "format": "{icon} {volume}%",
     "format-bluetooth": "{icon} {volume}%",
-    "format-muted": "",
+    "format-muted": " ",
     "format-icons": {
-        "alsa_output.pci-0000_00_1f.3.analog-stereo": " ",
-        "alsa_output.pci-0000_00_1f.3.analog-stereo-muted": "  ",
         "headphone": " ",
         "hands-free": "",
         "headset": "",
@@ -79,18 +79,32 @@
     "interval": 2
   },
 
+  "backlight": {
+      "format": "{icon} {percent}%",
+      "format-icons": ["󰃚", "󰃛", "󰃜", "󰃝", "󰃞", "󰃟", "󰃠"], // Brightness icons from low to high
+      "tooltip": true,
+      "tooltip-format": "Brightness: {percent}%",
+      "on-scroll-up": "brightnessctl set 5%+",
+      "on-scroll-down": "brightnessctl set 5%-",
+  },
+
   "battery": {
-    "interval": 2,
-    "states": {
-        "warning": 25,
-        "critical": 15
-    },
-    "format": "{icon}{capacity: >3}%",
-    "format-charging": " {capacity}%",
-    "format-plugged": " {capacity}%",
-    "format-full": " {icon}{capacity}%",
-    "format-icons": ["", "", "", "", ""]
-    },
+      "interval": 2,
+      "format": "{icon} {capacity}%",
+      "format-charging": "{icon} {capacity}% <span color='#89b4fa'>Charging</span>", // Blueish color for charging text
+      "format-plugged": "{icon} {capacity}% <span color='#a6e3a1'>Plugged</span>", // Greenish color for plugged text
+      "format-alt": "{timeTo} {icon}",
+      "states": {
+          "warning": 30,
+          "critical": 15
+      },
+      "format-icons": {
+          "charging": ["󰢜", "󰂆", "󰂇", "󰂈", "󰢝", "󰂉", "󰢞", "󰂊", "󰂋", "󰂅"], // Charging animation/steps
+          "default": ["󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"]  // Discharging steps
+      },
+      "tooltip": true,
+      "tooltip-format": "{timeTo} - {power} W"
+  },
 
   "clock": {
     "format-alt": "{:%H:%M}",
@@ -121,7 +135,7 @@
   },
 
   "network": {
-    "interface": "wlp4s0",
+    "interface": "wlp59s0",
     "format": "{ifname}",
     "format-wifi": " ",
     "format-ethernet": "{ipaddr}/{cidr} 󰊗",
