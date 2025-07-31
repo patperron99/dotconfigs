@@ -13,7 +13,7 @@ numlockx on &
 dunst &
 blueman-applet &
 nm-applet &
-if ! pgrep -x "flameshot" > /dev/null; then flameshot & fi
+# if ! pgrep -x "flameshot" > /dev/null; then flameshot & fi
 
 # Configure monitors
 exec ~/.config/i3/monitor_setup.sh

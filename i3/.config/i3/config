@@ -1,6 +1,6 @@
 # Define your monitors
-set $primarymonitor "DisplayPort-2"
-set $secondarymonitor "HDMI-A-0"
+set $primarymonitor "eDP1"
+set $secondarymonitor "DP-3"
 
 include $HOME/.config/i3/keymaps.conf
 include $HOME/.config/i3/rules.conf

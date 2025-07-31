@@ -1,6 +1,6 @@
 # Defin  you  monitor 
-set $primarymonitor "DP-3"
-set $secondarymonitor "HDMI-A-1"
+set $primarymonitor "eDP-1"
+set $secondarymonitor "DP-3"
 
 output $primarymonitor res 1920x1080 pos 0 0
 output $secondarymonitor res 1920x1080 pos 1920 0
@@ -9,8 +9,8 @@ set $mod Mod4
 set $alt Mod1
 font pango:Fira Code 12
 
+
 # exec dbus-run-session sway
-exec xdg-desktop-portal-wlr
 exec_always dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSOCK XDG_CURRENT_DESKTOP
 exec_always export XDG_CURRENT_DESKTOP=sway
 exec_always export GTK_THEME=Nordic-master
@@ -41,6 +41,7 @@ exec wireplumber
 exec pipewire
 exec pipewire-pulse
 
-exec xdg-desktop-portal
+exec --no-startup-id xdg-desktop-portal &
+exec --no-startup-id xdg-desktop-portal-wlr &
 
 exec_always autotiling

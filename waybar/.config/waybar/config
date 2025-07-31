@@ -38,6 +38,8 @@
   "sway/window": {
     "format": "{title}",
     "max-length": 50,
+    "all-outputs" : true,
+    "offscreen-css-text": "(Remote)",
     "offscreen-css": true
   },
 

@@ -72,19 +72,6 @@ end, { desc = "Grep file contents in current nvim-tree node" })
 -- Git-blame
 keymap.set("n", "<leader>gb", ":GitBlameToggle<CR>", { desc = "Toggle git blame" })
 
--- Harpoon
-keymap.set("n", "<leader>ha", require("harpoon.mark").add_file, { desc = "Add file to Harpoon" })
-keymap.set("n", "<leader>hh", require("harpoon.ui").toggle_quick_menu, { desc = "Toggle Harpoon quick menu" })
-keymap.set("n", "<leader>h1", function() require("harpoon.ui").nav_file(1) end, { desc = "Navigate to Harpoon file 1" })
-keymap.set("n", "<leader>h2", function() require("harpoon.ui").nav_file(2) end, { desc = "Navigate to Harpoon file 2" })
-keymap.set("n", "<leader>h3", function() require("harpoon.ui").nav_file(3) end, { desc = "Navigate to Harpoon file 3" })
-keymap.set("n", "<leader>h4", function() require("harpoon.ui").nav_file(4) end, { desc = "Navigate to Harpoon file 4" })
-keymap.set("n", "<leader>h5", function() require("harpoon.ui").nav_file(5) end, { desc = "Navigate to Harpoon file 5" })
-keymap.set("n", "<leader>h6", function() require("harpoon.ui").nav_file(6) end, { desc = "Navigate to Harpoon file 6" })
-keymap.set("n", "<leader>h7", function() require("harpoon.ui").nav_file(7) end, { desc = "Navigate to Harpoon file 7" })
-keymap.set("n", "<leader>h8", function() require("harpoon.ui").nav_file(8) end, { desc = "Navigate to Harpoon file 8" })
-keymap.set("n", "<leader>h9", function() require("harpoon.ui").nav_file(9) end, { desc = "Navigate to Harpoon file 9" })
-
 -- Vim REST Console
 keymap.set("n", "<leader>xr", ":call VrcQuery()<CR>", { desc = "Run REST query" })
 
