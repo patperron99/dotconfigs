@@ -6,8 +6,8 @@ return {
   main = "ibl",
   opts = {
     enabled = true,
-    indent = {
-      char = '|',
-    },
+    -- indent = {
+    --   char = '|',
+    -- },
   },
 }

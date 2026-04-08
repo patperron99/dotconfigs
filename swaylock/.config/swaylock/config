@@ -1,0 +1,77 @@
+# Swaylock configuration file with Nord theme
+# Place this file at ~/.config/swaylock/config
+
+# Nord color palette
+# Polar Night
+# #2e3440 (nord0) - darkest
+# #3b4252 (nord1) 
+# #434c5e (nord2)
+# #4c566a (nord3) - lightest dark
+
+# Snow Storm  
+# #d8dee9 (nord4) - darkest light
+# #e5e9f0 (nord5)
+# #eceff4 (nord6) - lightest
+
+# Frost
+# #8fbcbb (nord7) - frost green
+# #88c0d0 (nord8) - frost blue
+# #81a1c1 (nord9) - frost darker blue
+# #5e81ac (nord10) - frost darkest blue
+
+# Aurora
+# #bf616a (nord11) - red
+# #d08770 (nord12) - orange
+# #ebcb8b (nord13) - yellow
+# #a3be8c (nord14) - green
+# #b48ead (nord15) - purple
+
+# Background and general appearance
+color=2e3440
+image=$HOME/.config/backgrounds/default
+scaling=fill
+
+# Ring colors (the circle around password input)
+ring-color=3b4252
+ring-clear-color=81a1c1
+ring-caps-lock-color=ebcb8b
+ring-ver-color=88c0d0
+ring-wrong-color=bf616a
+
+# Key highlight colors
+key-hl-color=8fbcbb
+
+# Separator color (line between ring and text)
+separator-color=4c566a
+
+# Inside ring colors
+inside-color=2e344000
+inside-clear-color=81a1c100
+inside-caps-lock-color=ebcb8b00
+inside-ver-color=88c0d000
+inside-wrong-color=bf616a00
+
+# Text colors
+text-color=e5e9f0
+text-clear-color=2e3440
+text-caps-lock-color=2e3440
+text-ver-color=2e3440
+text-wrong-color=2e3440
+
+# Layout and text options
+indicator-radius=100
+indicator-thickness=20
+font=Inter
+font-size=18
+
+# Show failed login attempts
+show-failed-attempts
+
+# Don't show keyboard layout
+disable-caps-lock-text
+
+# Grace period (seconds to unlock without password after locking)
+# grace=2
+
+# Fade in time
+# fade-in=0.2

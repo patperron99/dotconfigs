@@ -24,7 +24,7 @@ return {
             extra_args = { "-i", "4" } -- Set indentation to 4 spaces (change as needed)
         }),
         -- null_ls.builtins.formatting.beautysh,    -- Bash formatter
-        null_ls.builtins.diagnostics.shellcheck, -- Bash linter
+        null_ls.builtins.formatting.shellcheck, -- Bash linter
       },
     })
 
